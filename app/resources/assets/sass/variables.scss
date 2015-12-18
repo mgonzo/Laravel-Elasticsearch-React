@@ -1,0 +1,152 @@
+// Fonts -------------------------
+$font-sans-family:  "Roboto", sans-serif;
+$font-script-family: 'Shadows Into Light Two', cursive;
+$font-em-pixel: 16px;
+$font-reactions:  "skReactions", sans-serif;
+
+// Sizes -------------------------
+$size-inline-height: 2em;
+$size-line-height-reading: remToPx(1.8);
+
+$size-font-size-tiny: remToPx(0.5);
+$size-font-size-mini: remToPx(0.6);
+$size-font-size-small: remToPx(0.8);
+$size-font-size-medium: remToPx(1);
+$size-font-size-reading: remToPx(1.1);
+$size-font-size-big: remToPx(1.2);
+$size-font-size-large: remToPx(1.375);
+$size-font-size-huge: remToPx(1.5);
+
+$size-sizes:
+    tiny,
+    mini,
+    small,
+    big,
+    large,
+    huge;
+
+$size-sizes-vars:
+    $size-font-size-tiny,
+    $size-font-size-mini,
+    $size-font-size-small,
+    $size-font-size-big,
+    $size-font-size-large,
+    $size-font-size-huge;
+
+// Colors-------------------------
+// Grays -------------------------
+$color-black: #0a0a0b;
+$color-gray-darkest: #141515;
+$color-gray-darker: #3b3e3f;
+$color-gray-dark: #666;
+$color-gray: #8b9092;
+$color-gray-light: #c0c3c4;
+$color-gray-lighter: #dfe1e1;
+$color-gray-lighterest: #f2f2f2;
+$color-gray-lightest: #fafafa;
+$color-white: #fff;
+
+$color-grays:
+    black,
+    gray-darkest,
+    gray-darker,
+    gray-dark,
+    gray,
+    gray-light,
+    gray-lighter,
+    gray-lightest,
+    white;
+
+$color-grays-vars:
+    $color-black,
+    $color-gray-darkest,
+    $color-gray-darker,
+    $color-gray-dark,
+    $color-gray,
+    $color-gray-light,
+    $color-gray-lighter,
+    $color-gray-lightest,
+    $color-white;
+
+$color-primary: #36b2d2;
+$color-secondary: #2f9cb9;
+$color-info: #e4c100;
+$color-error: #dd514c;
+$color-success: #5eb95e;
+$color-warning: #F57B00;
+
+$color-types:
+    primary,
+    secondary,
+    info,
+    error,
+    success,
+    warning;
+
+$color-types-vars:
+    $color-primary,
+    $color-secondary,
+    $color-info,
+    $color-error,
+    $color-success,
+    $color-warning;
+$color-social-facebook: #3B579D;
+$color-social-instagram: #443c35;
+$color-social-twitter: #00ACED;
+$color-social-pinterest: #b81621;
+$color-social-google-plus: #e93f2e;
+$color-social-stumble-upon: #EB4924;
+$color-social-tumblr: #35465c;
+$color-link: $color-gray;
+$color-she-orange: #ff6600;
+$color-knows-pink: #E3146B;
+$color-ad-background: #f9f6e4;
+$color-ad-sponsor: #bdab5d;
+$color-newsletter-parenting: #60a5c0;
+$color-newsletter-buzz: #87499a;
+$color-newsletter-daily: #ff6600;
+$color-newsletter-daily-recipe: #639c4e;
+
+$layout-menu-width: remToPx(17);
+$layout-header-height: remToPx(3.2);
+$layout-header-sub-height: remToPx(2.6);
+$layout-max-site-width: 1034px;
+$layout-page-padding: .75em;
+
+// Content ------------------------------
+$ui-page-rail-width: remToPx(20);
+$ui-page-gutter-width: remToPx(2.5);
+
+// Article Variables -------------------------------------
+$component-article-side-padding: remToPx(0.75);
+$component-article-negative-featured-padding: remToPx(-0.75);
+
+// Z Index --------------------------------------------
+$z-index-menu: 2;
+$z-index-page: 3;
+
+// header
+$z-index-header-sub: 4;
+$z-index-header: 5;
+$z-index-header-sub-medium: 6;
+$z-index-header-social: 6;
+$z-index-header-social-more: 7;
+
+// notification
+$z-index-notification: 8;
+
+// search
+$z-index-search: 9;
+$z-index-search-header: 10;
+$z-index-search-close: 11;
+
+// article
+$z-index-article-author: 100000; // stupid high because of ooyala video
+$z-index-page-overlay: 1000001; // dito
+
+// modal
+$z-index-modal: 1000002;
+$z-index-modal-modal: 1000003;
+
+// tour
+$z-index-tour: 1000004;
