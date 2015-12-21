@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: SheKnows
-        psr4_prefix: SheKnows
+        namespace: App
+        psr4_prefix: App
         src_path: app

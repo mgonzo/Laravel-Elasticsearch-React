@@ -1,9 +1,9 @@
 <?php
 
-namespace SheKnows\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use SheKnows\Repositories\ArticleRepository;
+use App\Repositories\ArticleRepository;
 use Elasticsearch\ClientBuilder;
 
 class AppServiceProvider extends ServiceProvider

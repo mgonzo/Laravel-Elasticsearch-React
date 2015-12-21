@@ -140,10 +140,12 @@ return [
         /*
          * Application Service Providers...
          */
-        SheKnows\Providers\AppServiceProvider::class,
-        SheKnows\Providers\AuthServiceProvider::class,
-        SheKnows\Providers\EventServiceProvider::class,
-        SheKnows\Providers\RouteServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
+
+        React\ReactServiceProvider::class,
 
     ],
 

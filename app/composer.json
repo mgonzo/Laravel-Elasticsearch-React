@@ -8,8 +8,8 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "elasticsearch/elasticsearch": "^2.0",
-	"reactjs/react-php-v8js": "dev-master",
-	"talyssonoc/react-laravel": "0.10.2@dev"
+        "reactjs/react-php-v8js": "dev-master",
+        "talyssonoc/react-laravel":"dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -22,7 +22,7 @@
             "database"
         ],
         "psr-4": {
-            "SheKnows\\": "app/"
+            "App\\": "app/"
         }
     },
     "autoload-dev": {

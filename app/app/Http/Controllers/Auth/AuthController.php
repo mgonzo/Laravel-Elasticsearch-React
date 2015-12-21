@@ -1,10 +1,10 @@
 <?php
 
-namespace SheKnows\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
-use SheKnows\User;
+use App\User;
 use Validator;
-use SheKnows\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace SheKnows\Events;
+namespace App\Events;
 
 abstract class Event
 {

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b83a2a803f6152ea4fef4a9c3c5ce7c1",
-    "content-hash": "fcb5ce123d17018792ef243a14c8983b",
+    "hash": "03805c53e3cac5e256c16466d80b9639",
+    "content-hash": "8b270f83872972f934f8203de4e2cf15",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -2160,16 +2160,16 @@
         },
         {
             "name": "talyssonoc/react-laravel",
-            "version": "v0.10.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/talyssonoc/react-laravel.git",
-                "reference": "15b606d4a9f092d65cfeaa8fb8683d84cefdccd6"
+                "reference": "313056f54f178b5497d5df42d70b9da726563fd0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/talyssonoc/react-laravel/zipball/15b606d4a9f092d65cfeaa8fb8683d84cefdccd6",
-                "reference": "15b606d4a9f092d65cfeaa8fb8683d84cefdccd6",
+                "url": "https://api.github.com/repos/talyssonoc/react-laravel/zipball/313056f54f178b5497d5df42d70b9da726563fd0",
+                "reference": "313056f54f178b5497d5df42d70b9da726563fd0",
                 "shasum": ""
             },
             "require": {
@@ -2210,7 +2210,7 @@
                 "react",
                 "reactjs"
             ],
-            "time": "2015-10-02 05:00:00"
+            "time": "2015-10-20 02:32:30"
         },
         {
             "name": "version/version",

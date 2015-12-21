@@ -1,9 +1,9 @@
 <?php
 
-namespace SheKnows\Repositories;
+namespace App\Repositories;
 
 use Elasticsearch\Client;
-use SheKnows\Article;
+use App\Article;
 
 class ArticleRepository implements ContentRepository
 {

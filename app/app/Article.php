@@ -1,6 +1,6 @@
 <?php
 
-namespace SheKnows;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 

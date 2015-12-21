@@ -1,6 +1,6 @@
 <?php
 
-namespace SheKnows\Repositories;
+namespace App\Repositories;
 
 Interface ContentRepository
 {
