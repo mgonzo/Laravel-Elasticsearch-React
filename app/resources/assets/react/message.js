@@ -1,22 +1,24 @@
 var Message = React.createClass({
 
-
   componentDidMount: function () {
+  },
+
+  clicked: function (){
+    console.log('I feel much better, now.');
   },
 
   render: function() {
     var self = this;
 
     return (
-        <div> 
-          Hello, 
-          {this.props.title} 
+        <div onClick={this.clicked}>
+          Just what do you think youre you doing {this.props.title}
         </div>
     );
   }
 });
 
 ReactDOM.render(
-    <Message />, 
+    <Message title="Dave"/>,
     document.getElementById('message')
 );

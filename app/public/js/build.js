@@ -138,6 +138,49 @@ var ListApplication = React.createClass({
 ReactDOM.render(React.createElement(ListApplication, { source: '/list/parenting' }), document.getElementById('new-list'));
 'use strict';
 
+var Message = React.createClass({
+  displayName: 'Message',
+
+  componentDidMount: function componentDidMount() {},
+
+  getInitialState: function getInitialState() {
+    return { items: this.props.items };
+  },
+
+  clicked: function clicked() {
+    console.log('I feel much better, now.');
+  },
+
+  render: function render() {
+    var self = this;
+
+    return React.createElement(
+      'span',
+      null,
+      React.createElement(
+        'div',
+        { onClick: this.clicked },
+        'Just what do you think youre you doing ',
+        this.props.title
+      ),
+      React.createElement(
+        'div',
+        null,
+        this.state.items.map(function (item) {
+          return React.createElement(
+            'span',
+            null,
+            item
+          );
+        })
+      )
+    );
+  }
+});
+
+ReactDOM.render(React.createElement(Message, { title: 'Dave' }), document.getElementById('message'));
+'use strict';
+
 var NavigationList = React.createClass({
   displayName: 'NavigationList',
 

@@ -1,0 +1,1 @@
+{"virtualbox":{"/src":{"owner":"vagrant","group":49,"mount_options":["dmode=775","fmode=775"],"guestpath":"/src","hostpath":"/home/mgonzo/laravel/app","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/mgonzo/laravel","disabled":false}}}

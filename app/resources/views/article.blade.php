@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Article Title Goes Here</title>
         <link href="/css/app.css" rel="stylesheet">
-        @include('jquery')
-        @include('react')
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.js"></script>
+        {{-- @include('react') --}}
         @include('reactdom')
+        @include('jquery')
     </head>
     <body>
 
@@ -13,9 +15,10 @@
             <div id="dfp-slot-leaderboard"
                  class="leaderboard"
                  style="width: 100%;
-                        position: relative; 
+                        position: relative;
                         top: 0;">
             </div>
+            @include('header')
             <main>
                 <article>
                     <header>
@@ -42,13 +45,14 @@
         <p>{{ $channel['slug'] }}</p>
         <p>{{ $id }}</p>
         <p>{{ $url }}</p>
-        <script src="/js/build.js"></script>
+        <script src="/js/components.js"></script>
+        <script src="/js/render.js"></script>
         <script src="/js/ads.js"></script>
 
         <script>
             window.addEventListener('click', function (event) {
-                console.log(event.target);
-                console.log(event.target.dataset);
+                //console.log(event.target);
+                //console.log(event.target.dataset);
             });
         </script>
 
