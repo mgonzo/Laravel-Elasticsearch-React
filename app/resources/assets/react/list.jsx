@@ -17,8 +17,8 @@ var ListApplication = React.createClass({
     if (self.loading) return;
 
     httpRequest.onreadystatechange = function () {
-      if (httpRequest.readyState == 4 && 
-          httpRequest.status == 200 && 
+      if (httpRequest.readyState == 4 &&
+          httpRequest.status == 200 &&
           httpRequest.responseText) {
         try {
 
@@ -96,11 +96,11 @@ var ListApplication = React.createClass({
     var self = this;
 
     return (
-        <div> { 
+        <div> {
           this.state.list.map(function (article, index) {
             var src = 'http://cdn.skim.gs/image/upload/c_fill,dpr_1.0,w_200/' + article.image.id;
             return (
-              <article style={self.style.article}> 
+              <article style={self.style.article}>
                 <div style={self.style.image}>
                   <a href={article.url}><img src={src}></img></a>
                 </div>
@@ -112,13 +112,9 @@ var ListApplication = React.createClass({
                 </div>
               </article>
             );
-          }) 
+          })
         } </div>
     );
   }
 });
 
-ReactDOM.render(
-    <ListApplication source="/list/parenting"/>, 
-    document.getElementById('new-list')
-);

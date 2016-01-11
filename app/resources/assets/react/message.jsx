@@ -1,9 +1,16 @@
 var Message = React.createClass({
 
+  getInitialState: function () {
+    return {
+      title: ''
+    };
+  },
+
   componentDidMount: function () {
   },
 
-  clicked: function (){
+  clicked: function (e){
+    console.log(e.target);
     console.log('I feel much better, now.');
   },
 
@@ -17,8 +24,3 @@ var Message = React.createClass({
     );
   }
 });
-
-ReactDOM.render(
-    <Message title="Dave"/>,
-    document.getElementById('message')
-);

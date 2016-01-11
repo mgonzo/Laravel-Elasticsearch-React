@@ -141,13 +141,16 @@ ReactDOM.render(React.createElement(ListApplication, { source: '/list/parenting'
 var Message = React.createClass({
   displayName: 'Message',
 
-  componentDidMount: function componentDidMount() {},
-
   getInitialState: function getInitialState() {
-    return { items: this.props.items };
+    return {
+      title: ''
+    };
   },
 
-  clicked: function clicked() {
+  componentDidMount: function componentDidMount() {},
+
+  clicked: function clicked(e) {
+    console.log(e.target);
     console.log('I feel much better, now.');
   },
 
@@ -155,95 +158,12 @@ var Message = React.createClass({
     var self = this;
 
     return React.createElement(
-      'span',
-      null,
-      React.createElement(
-        'div',
-        { onClick: this.clicked },
-        'Just what do you think youre you doing ',
-        this.props.title
-      ),
-      React.createElement(
-        'div',
-        null,
-        this.state.items.map(function (item) {
-          return React.createElement(
-            'span',
-            null,
-            item
-          );
-        })
-      )
+      'div',
+      { onClick: this.clicked },
+      'Just what do you think youre you doing ',
+      this.props.title
     );
   }
 });
 
 ReactDOM.render(React.createElement(Message, { title: 'Dave' }), document.getElementById('message'));
-'use strict';
-
-var NavigationList = React.createClass({
-  displayName: 'NavigationList',
-
-  getInitialState: function getInitialState() {
-    return {
-      'links': ['one', 'two', 'three']
-    };
-  },
-
-  render: function render() {
-    return React.createElement(
-      'ul',
-      { style: this.props.style },
-      ' ',
-      this.state.links.map(function (link, index) {
-        return React.createElement(
-          'li',
-          null,
-          link
-        );
-      }),
-      ' '
-    );
-  }
-});
-
-var Navigation = React.createClass({
-  displayName: 'Navigation',
-
-  getInitialState: function getInitialState() {
-    return {
-      display: 'none'
-    };
-  },
-
-  componentDidMount: function componentDidMount() {},
-
-  clickHeader: function clickHeader(event) {
-    if (this.state.display === 'none') {
-      this.setState({
-        display: 'block'
-      });
-    } else {
-      this.setState({
-        display: 'none'
-      });
-    }
-  },
-
-  render: function render() {
-    var self = this;
-
-    return React.createElement(
-      'span',
-      null,
-      React.createElement(
-        'header',
-        { onClick: this.clickHeader },
-        'Sections'
-      ),
-      React.cloneElement(React.createElement(NavigationList, null), { style: { display: this.state.display } })
-    );
-  }
-});
-
-ReactDOM.render(React.createElement(Navigation, null), document.getElementById('navigation'));

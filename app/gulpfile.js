@@ -20,10 +20,10 @@ const babel = require('gulp-babel');
 const concat = require('gulp-concat');
  
 gulp.task('default', function () {
-      return gulp.src('resources/assets/react/*.js')
+      return gulp.src('resources/assets/react/*.jsx')
           .pipe(babel({
                         presets: ['es2015', 'react']
                     }))
-        .pipe(concat('build.js'))
+        .pipe(concat('components.js'))
         .pipe(gulp.dest('public/js'));
 });

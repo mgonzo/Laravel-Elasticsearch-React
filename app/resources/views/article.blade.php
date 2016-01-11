@@ -8,6 +8,7 @@
         {{-- @include('react') --}}
         @include('reactdom')
         @include('jquery')
+        <script src="/js/components.js"></script>
     </head>
     <body>
 
@@ -37,7 +38,14 @@
                     <span>{!! $body !!}</span>
                 </article>
                 @include('rightrail')
+
+                {{-- Element for client side only rendering.
+                     Commented out for server side rendering.
                 <div id="new-list"></div>
+                 --}}
+
+                @react_component('ListApplication', ['source' => "/list/{{channel['slug']}}" ], [ 'prerender' => true, 'id' => 'new-list'])
+                
             </main>
         </section>
 
@@ -45,8 +53,6 @@
         <p>{{ $channel['slug'] }}</p>
         <p>{{ $id }}</p>
         <p>{{ $url }}</p>
-        <script src="/js/components.js"></script>
-        <script src="/js/render.js"></script>
         <script src="/js/ads.js"></script>
 
         <script>
@@ -54,6 +60,16 @@
                 //console.log(event.target);
                 //console.log(event.target.dataset);
             });
+
+            /* * Client side renderer for the article list */
+            ReactDOM.render(
+              React.createElement(
+                ListApplication, { 
+                source: '/list/{{ $channel['slug'] }}'
+              }), 
+              document.getElementById('new-list')
+            );
+
         </script>
 
     </body>

@@ -1,8 +1,10 @@
 var NavigationList = React.createClass({
   getInitialState: function (){
-    return {
-      'links': ['one', 'two', 'three']
-    };
+    return { 'links': [] };
+  },
+
+  componentDidMount: function () {
+    this.state.links = this.props.links;
   },
 
   render: function () {
@@ -52,9 +54,6 @@ var Navigation = React.createClass({
 });
 
 ReactDOM.render(
-    <Navigation/>, 
+    <Navigation/>,
     document.getElementById('navigation')
 );
-
-
-
