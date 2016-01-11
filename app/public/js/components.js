@@ -139,27 +139,74 @@ var ListApplication = React.createClass({
 var Message = React.createClass({
   displayName: 'Message',
 
-  getInitialState: function getInitialState() {
-    return {
-      title: ''
-    };
-  },
-
-  componentDidMount: function componentDidMount() {},
-
   clicked: function clicked(e) {
     console.log(e.target);
     console.log('I feel much better, now.');
   },
 
   render: function render() {
-    var self = this;
-
     return React.createElement(
       'div',
       { onClick: this.clicked },
       'Just what do you think youre you doing ',
       this.props.title
+    );
+  }
+});
+'use strict';
+
+var NavigationList = React.createClass({
+  displayName: 'NavigationList',
+
+  render: function render() {
+    return React.createElement(
+      'ul',
+      { style: this.props.style },
+      ' ',
+      this.props.links.map(function (link, index) {
+        return React.createElement(
+          'li',
+          null,
+          link
+        );
+      }),
+      ' '
+    );
+  }
+});
+
+var Navigation = React.createClass({
+  displayName: 'Navigation',
+
+  getInitialState: function getInitialState() {
+    return {
+      display: 'none'
+    };
+  },
+  //componentDidMount: function () { },
+
+  clickHeader: function clickHeader(e) {
+    if (this.state.display === 'none') {
+      this.setState({
+        display: 'block'
+      });
+    } else {
+      this.setState({
+        display: 'none'
+      });
+    }
+  },
+
+  render: function render() {
+    return React.createElement(
+      'span',
+      null,
+      React.createElement(
+        'header',
+        { onClick: this.clickHeader },
+        'Sections'
+      ),
+      React.cloneElement(React.createElement(NavigationList, null), { links: this.props.links, style: { display: this.state.display } })
     );
   }
 });

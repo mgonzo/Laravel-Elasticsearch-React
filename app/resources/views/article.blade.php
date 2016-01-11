@@ -23,7 +23,7 @@
             <main>
                 <article>
                     <header>
-                        <h2>{{ $title }}</h2>
+                        <h2>{!! $title !!}</h2>
                         <div class="author">
                             <a class="photo" href="{{ url('/') }}/authors/{{ $author['slug'] }}/articles">
                                 <img class="avatar" src="http://cdn.sheknows.com/authors/profile/{{ $author['basename'] }}" alt="{{$author['name']}}">
@@ -34,7 +34,7 @@
                         </div>
                     </header>
                     <img src="http://cdn.skim.gs/images/c_fill,h_391,w_695,dpr_1.0/{{ $image['id'] }}/{{ $image['filename'] }}"></img>
-                    <p>{{ $subtitle }}</p>
+                    <p>{!! $subtitle !!}</p>
                     <span>{!! $body !!}</span>
                 </article>
                 @include('rightrail')
