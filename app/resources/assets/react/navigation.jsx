@@ -4,7 +4,7 @@ var NavigationList = React.createClass({
     return (
       <ul style={this.props.style}> {
         this.props.links.map(function (link, index) {
-          return <li>{ link }</li>;
+          return <li><a href={link[0]}>{ link[1] }</a></li>;
         })
       } </ul>
     );

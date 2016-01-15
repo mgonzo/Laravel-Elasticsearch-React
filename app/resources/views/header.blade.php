@@ -6,9 +6,9 @@
      that the client side render will use. --}}
 
 @react_component('Message', [ 'title' => 'Dave' ], [ 'prerender' => true, 'id' => 'message'])
-@react_component('Navigation', [ 'links' => ['one', 'two', 'three'] ], [ 'prerender' => true, 'id' => 'navigation'])
+@react_component('Navigation', [ 'links' => $channels ], [ 'prerender' => true, 'id' => 'navigation'])
+
 <script>
   ReactDOM.render(React.createElement(Message, {title: "Dave"}), document.getElementById('message'));
-
-  ReactDOM.render(React.createElement(Navigation, {links: ['one', 'two', 'three']}), document.getElementById('navigation'));
+  ReactDOM.render(React.createElement(Navigation, {links: {!! json_encode($channels) !!} }), document.getElementById('navigation'));
 </script>

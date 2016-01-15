@@ -7,6 +7,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Repositories\ArticleRepository;
+use App\Repositories\ChannelRepository;
 use Request;
 
 class ArticleController extends Controller
@@ -32,6 +33,11 @@ class ArticleController extends Controller
             'sortDirection' => 'desc',
             'page' => Request::input('page')
         ]);
+    }
+
+    public function showArticleAmp($id)
+    {
+        return view('article_amp', $this->repository->one($id));
     }
 }
 

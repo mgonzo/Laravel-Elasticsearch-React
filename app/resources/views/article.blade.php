@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Article Title Goes Here</title>
+        <title>{!! $title !!}}</title>
         <link href="/css/app.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.js"></script>
         {{-- @include('react') --}}
@@ -19,6 +19,7 @@
                         position: relative;
                         top: 0;">
             </div>
+
             @include('header')
             <main>
                 <article>

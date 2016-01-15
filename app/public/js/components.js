@@ -144,10 +144,14 @@ var Message = React.createClass({
     console.log('I feel much better, now.');
   },
 
+  style: {
+    display: 'none'
+  },
+
   render: function render() {
     return React.createElement(
       'div',
-      { onClick: this.clicked },
+      { onClick: this.clicked, style: this.style },
       'Just what do you think youre you doing ',
       this.props.title
     );
@@ -167,7 +171,11 @@ var NavigationList = React.createClass({
         return React.createElement(
           'li',
           null,
-          link
+          React.createElement(
+            'a',
+            { href: link[0] },
+            link[1]
+          )
         );
       }),
       ' '
