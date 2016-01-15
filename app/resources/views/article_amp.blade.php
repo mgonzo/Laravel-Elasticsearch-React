@@ -19,7 +19,7 @@
     <style>body {opacity: 0}</style><noscript><style>body {opacity: 1}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
 
-    <style amp-custom></style>
+    <style amp-custom>{!! $amp_css !!}</style>
 
   </head>
   <body>
