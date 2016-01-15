@@ -19,3 +19,6 @@ Route::get('article/{id}', 'ArticleController@showArticle');
 Route::get('article/{id}/amp', 'ArticleController@showArticleAmp');
 
 Route::get('list/{channel}', 'ArticleController@fetchArticleList');
+
+Route::get('channel/{slug}', 'ChannelController@showChannel');
+Route::get('channel/{slug}/amp', 'ChannelController@showChannelAmp');

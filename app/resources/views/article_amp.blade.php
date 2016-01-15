@@ -18,20 +18,22 @@
     </script>
     <style>body {opacity: 0}</style><noscript><style>body {opacity: 1}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-
     <style amp-custom>{!! $amp_css !!}</style>
-
   </head>
   <body>
+    <div class="content">
+        <amp-ad width=728 height=90
+            type="doubleclick"
+            data-slot="/8352/sheknows/parenting/baby">
+        </amp-ad>
 
-    <amp-ad width=728 height=90
-        type="doubleclick"
-        data-slot="/8352/sheknows/parenting/baby">
-    </amp-ad>
-
-    <h2>{!! $title !!}</h2>
-    <amp-img src="http://cdn.skim.gs/images/c_fill,h_391,w_695,dpr_1.0/{{ $image['id'] }}/{{ $image['filename'] }}" alt="{{ $title }}" height="391" width="695"></amp-img>
-    <p>{!! $subtitle !!}</p>
-    <span>{!! $body !!}</span>
+        <header class="main">
+            <i class="she"></i><i class="knows"></i>
+        </header>
+        <h2>{!! $title !!}</h2>
+        <amp-img src="http://cdn.skim.gs/images/c_fill,h_338,w_600,dpr_1.0/{{ $image['id'] }}/{{ $image['filename'] }}" alt="{{ $title }}" height="338" width="600"></amp-img>
+        <p>{!! $subtitle !!}</p>
+        <span>{!! $body !!}</span>
+    </div>
   </body>
 </html>

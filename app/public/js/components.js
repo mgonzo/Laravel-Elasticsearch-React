@@ -214,7 +214,7 @@ var Navigation = React.createClass({
         { onClick: this.clickHeader },
         'Sections'
       ),
-      React.cloneElement(React.createElement(NavigationList, null), { links: this.props.links, style: { display: this.state.display } })
+      React.cloneElement(React.createElement(NavigationList, null), { links: this.props.links, style: { display: this.state.display, position: 'absolute' } })
     );
   }
 });

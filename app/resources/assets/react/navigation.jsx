@@ -36,7 +36,7 @@ var Navigation = React.createClass({
     return (
           <span>
             <header onClick={this.clickHeader}>Sections</header>
-            { React.cloneElement(<NavigationList />, {links: this.props.links, style: {display: this.state.display}}) }
+            { React.cloneElement(<NavigationList />, {links: this.props.links, style: {display: this.state.display, position: 'absolute'}}) }
           </span>
     );
   }

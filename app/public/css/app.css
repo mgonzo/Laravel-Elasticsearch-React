@@ -24,8 +24,37 @@ body {
     color: #8b9092; }
 
 header.main {
-  height: 51.2px;
-  border-bottom: 1px solid #dfe1e1; }
+  border-bottom: 1px solid #dfe1e1;
+  box-sizing: border-box;
+  height: 81.2px;
+  padding-top: 13px;
+  text-align: center; 
+  position: fixed;
+  width: 100%;
+  top:0;
+  z-index: 99999;
+  background-color: #fff; }
+
+i.she {
+    font-family: "sk"; 
+    color: #f60;
+    margin-right: .05em;
+    font-size: 2.7em;
+    font-style: normal; }
+i.knows {
+    font-family: "sk"; 
+    color: #666;
+    font-size: 2.7em;
+    font-style: normal; }
+i.she::before {
+    content: "\e60e"; }
+i.knows::before {
+    content: "\e60d"; }
+
+#navigation {
+    position: absolute;
+    left: 20px;
+    top: 20px; }
 
 .page {
   max-width: 1034px;
@@ -34,7 +63,8 @@ header.main {
   z-index: 3;
   min-height: 800px;
   transition: all .2s ease-out 0s;
-  background-color: #fafafa; }
+  background-color: #fafafa; 
+  margin-top: 81.2px; }
   .page main {
     position: relative; }
 
@@ -51,7 +81,9 @@ main article h1, main article .h1 {
 
 main article {
   margin-right: 20em;
-  padding-top: 0; }
+  padding-top: 0; 
+  padding-left: .5em; }
+
   main article h1 {
     font-size: 2em;
     line-height: 1.15em;
