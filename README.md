@@ -10,4 +10,18 @@ After cloning the project ...
 
 `vagrant up`
 
+`vagrant ssh app`
+
+
+*in the vagrant box...*
+
+`cd /src`
+
+`composer install`
+
+`npm install`
+
+
+
+
 Elasticsearch is not supplied in the virtual. You will need a running copy of Elasticsearch with an index or alias called 'articles' and one called 'channels'. 
