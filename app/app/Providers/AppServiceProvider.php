@@ -40,12 +40,17 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bindShared(ArticleRepository::class, function() {
-            $cb = ClientBuilder::create();
-            $cb->setHosts([$_ENV['ES_HOST']]);
-            $cb->setRetries(2);
+        $cb = ClientBuilder::create();
+        $cb->setHosts([$_ENV['ES_HOST']]);
+        $cb->setRetries(2);
+        $client = $cb->build();
 
-            return new ArticleRepository($cb->build());
+        $this->app->bindShared(ArticleRepository::class, function() use ($client) {
+            return new ArticleRepository($client);
+        });
+
+        $this->app->bindShared(ChannelRepository::class, function() use ($client) {
+            return new ChannelRepository($client);
         });
     }
 }

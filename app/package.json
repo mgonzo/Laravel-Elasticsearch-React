@@ -1,6 +1,7 @@
 {
   "private": true,
   "devDependencies": {
+    "jest-cli": "^0.8.2"
   },
   "dependencies": {
     "babel-preset-es2015": "^6.1.18",
@@ -11,5 +12,17 @@
     "gulp-babel": "^6.1.1",
     "gulp-concat": "^2.6.0",
     "laravel-elixir": "^4.0.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "testPathDirs": [
+      "resources/assets/react"
+    ]
   }
 }

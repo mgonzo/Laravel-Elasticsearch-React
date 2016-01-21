@@ -21,9 +21,14 @@ class ChannelController extends Controller
         $this->articleRepository = $articleRepo;
     }
 
-    public function showChannel($id) 
+    public function showChannel($slug) 
     {
-        return view('channel', $this->repository->one($id));
+        $channel = $this->channelRepository->search([
+            'searchField' => 'channel.slug', 
+            'searchValue' => $slug
+        ]);
+
+        return view('channel', $channel[0]);
     }
 
     public function showChannelAmp($id)

@@ -32,7 +32,29 @@ class ChannelRepository implements ContentRepository
 
     public function search($input)
     {
-        return [];
+        $params = [
+         'index' => 'channels',
+         'type' => 'channel',
+         'body' => []
+        ];
+
+        if (!empty($input['page'])) {
+            $from = $input['page'] - 1;
+            $params['body']['from'] = $from * 10;
+            $params['body']['size'] = 10;
+        }
+        
+        if (!empty($input['searchField'])) {
+            $params['body']['query'] = [
+                'match' => [
+                    $input['searchField'] => $input['searchValue']
+                ]
+            ];
+        }
+
+        $response = $this->elasticsearch->search($params);
+
+        return $this->transformArray($response['hits']['hits']);
     }
 
     private function transformArray($hits) {

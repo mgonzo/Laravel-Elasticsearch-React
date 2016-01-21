@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{!! $title !!}}</title>
+        <link rel="amphtml" href="{{ $url }}/amp" />
         <link href="/css/app.css" rel="stylesheet">
         <!--script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.js"></script-->
         @include('react')

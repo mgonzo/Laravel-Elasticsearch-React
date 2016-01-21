@@ -34,6 +34,13 @@
         <amp-img src="http://cdn.skim.gs/images/c_fill,h_338,w_600,dpr_1.0/{{ $image['id'] }}/{{ $image['filename'] }}" alt="{{ $title }}" height="338" width="600"></amp-img>
         <p>{!! $subtitle !!}</p>
         <span>{!! $body !!}</span>
+
+        <amp-video width=400 height=300 poster="" autoplay="true" controls="true">
+          <div fallback>
+            <p>Your browser doesn’t support HTML5 video</p>
+          </div>
+          <source type="video/mp4" src="https://cms.ooyala.com/wwdG05dDrVxz0SgsDA3FpdEqGLvzG9CJ%2F0000000000000-0000304007411?Signature=FwJxF8b0Zy3SGt2pTCKHlm4Yk5I%3D&Expires=1453580325&AWSAccessKeyId=AKIAJUAIW2RNELHXXF2Q&">
+        </amp-video>
     </div>
   </body>
 </html>
